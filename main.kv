@@ -1,0 +1,123 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        # (restante do layout aqui)
+        padding: 20
+        spacing: 15
+        canvas.before:
+            Color:
+                rgba: 0.9, 0.9, 0.9, 1  # Fundo cinza claro
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: "Calculadora Bitcoin"
+            font_size: 24
+            color: 0, 0, 0, 1  # Preto
+            size_hint_y: None
+            height: 60
+
+        TextInput:
+            id: valor_reais
+            hint_text: "Valor em reais (R$)"
+            input_filter: "float"
+            multiline: False
+            background_color: 1, 1, 1, 1  # Branco
+            foreground_color: 0, 0, 0, 1  # Preto
+            size_hint_y: None
+            height: 50
+
+        TextInput:
+            id: desconto
+            hint_text: "Taxa de corretagem (%)"
+            input_filter: "float"
+            multiline: False
+            background_color: 1, 1, 1, 1  # Branco
+            foreground_color: 0, 0, 0, 1  # Preto
+            size_hint_y: None
+            height: 50
+
+        TextInput:
+            id: taxa
+            hint_text: "Taxas da rede (%)"
+            input_filter: "float"
+            multiline: False
+            background_color: 1, 1, 1, 1  # Branco
+            foreground_color: 0, 0, 0, 1  # Preto
+            size_hint_y: None
+            height: 50
+
+        Button:
+            text: "Calcular"
+            size_hint_y: None
+            height: 50
+            background_color: 0, 0, 0.545, 1  # Azul ceu
+            color: 1, 1, 1, 1  # Branco
+            on_press: root.calcular_satoshis()
+
+        Label:
+            id: resultado
+            text: "Resultado aparecerá aqui."
+            color: 0, 0, 0, 1
+            size_hint_y: None
+            height: 50
+
+        Label:
+            text: "[ref=https://t.me/stack_fy_bot?/start=FreedomCompre Bitcoin sem KYC na StackFy[/ref]"
+            markup: True
+            font_size: 18
+            color: 0, 0, 1, 1  # Azul
+            size_hint_y: None
+            height: 40
+            on_ref_press: app.abrir_link("https://t.me/stack_fy_bot?/start=Freedom")
+
+        GridLayout:
+            cols: 2
+            row_force_default: True
+            row_default_height: 30
+            spacing: 10
+
+            # Coluna 1
+            Label:
+                text: "[ref=https://www.youtube.com/watch?v=NhWTcMy4AgE]Novo no bitcoin? Comece aqui[/ref]"
+                markup: True
+                font_size: 16
+                color: 0, 0, 1, 1  # Azul
+                on_ref_press: app.abrir_link("https://www.youtube.com/watch?v=NhWTcMy4AgE")
+
+            Label:
+                text: "[ref=https://www.youtube.com/watch?v=1uK2_dnuQBg&list=PLRisaeHTE4Q0xFAsG61Bcomk3ZXCXTLVP]Playlist Seiiti Arata[/ref]"
+                markup: True
+                font_size: 16
+                color: 0, 0, 1, 1  # Azul
+                on_ref_press: app.abrir_link("https://www.youtube.com/watch?v=1uK2_dnuQBg&list=PLRisaeHTE4Q0xFAsG61Bcomk3ZXCXTLVP")
+
+            Label:
+                text: "[ref=https://www.youtube.com/watch?v=dNS9WNEHwrA]Como usar o NOSTR[/ref]"
+                markup: True
+                font_size: 16
+                color: 0, 0, 1, 1  # Azul
+                on_ref_press: app.abrir_link("https://www.youtube.com/watch?v=dNS9WNEHwrA")
+
+            # Coluna 2
+            Label:
+                text: "[ref=https://www.youtube.com/watch?v=FGLNlhR9XVI]Audiolivro Bitcoin RedPill[/ref]"
+                markup: True
+                font_size: 16
+                color: 0, 0, 1, 1  # Azul
+                on_ref_press: app.abrir_link("https://www.youtube.com/watch?v=FGLNlhR9XVI")
+
+            Label:
+                text: "[ref=https://orbot.app/]Orbot - VPN grátis[/ref]"
+                markup: True
+                font_size: 16
+                color: 0, 0, 1, 1  # Azul
+                on_ref_press: app.abrir_link("https://orbot.app/")
+
+            Label:
+                text: "[ref=https://mempool.space/]Mempool BTC MainNet[/ref]"
+                markup: True
+                font_size: 16
+                color: 0, 0, 1, 1  # Azul
+                on_ref_press: app.abrir_link("https://mempool.space/")

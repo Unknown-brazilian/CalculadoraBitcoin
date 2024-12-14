@@ -1,0 +1,5 @@
+CalculadoraBitcoin/
+├── backend.py       # Lógica do backend
+├── main.py          # Código principal (Kivy)
+├── main.kv          # Layout da interface gráfica
+├── requirements.txt # Dependências (opcional)
